@@ -1,26 +1,17 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    app: {
+  modules: ['nuxt-svgo'],
+  app: {
     head: {
       link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@400&display=swap'
+        { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@400&display=swap' 
         }
+      ],
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ]
     }
-  },
-  compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
-
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/scripts',
-    '@nuxt/test-utils',
-    '@nuxt/ui'
-  ]
+  }
 })

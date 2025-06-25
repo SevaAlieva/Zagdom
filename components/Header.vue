@@ -1,22 +1,21 @@
 <template>
   <header class="header">
     <div class="container">
-      <div class="logo">
-        <img src="~/assets/images/logo.png" alt="zagdom logo">
+      <div class="header-left">
+        <div class="logo">
+          <img src="/icons/logo.svg" alt="zagdom logo" class="logo-img">
+          <img src="/icons/zagdom.svg" alt="zagdom" class="zagdom-img">
+        </div>
+        
+        <nav class="nav">
+          <a href="#" v-for="item in navItems" :key="item.url" class="nav-item">{{ item.label }}</a>
+        </nav>
       </div>
       
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">Реализованные проекты</a></li>
-          <li class="nav-item"><a href="#">Новости</a></li>
-          <li class="nav-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      
-      <div class="contacts">
+      <div class="header-right">
         <div class="phone-wrapper">
-          <img src="~/assets/images/telephone.png" alt="phone icon" class="phone-icon">
-          <a href="tel:79009009090" class="phone">7 (900) 900-90-90</a>
+          <img src="/icons/phone.svg" alt="phone icon" class="icon">
+          <a :href="`tel:${phone}`" class="phone">{{ phone }}</a>
         </div>
         <button class="btn">Оставить заявку</button>
       </div>
@@ -25,109 +24,98 @@
 </template>
 
 <script setup lang="ts">
-// Логика компонента
+const phone = '+7 (900) 900-90-90'
+
+const navItems = [
+  { url: '#projects', label: 'Реализованные проекты' },
+  { url: '#news', label: 'Новости' },
+  { url: '#contacts', label: 'Контакты' }
+]
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .header {
-  height: 120px;
+  padding: 24px 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 88px;
+}
+
+.header-left {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
-  
-  .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    margin-right: 88px;
-    
-    img {
-      height: 40px;
-      width: auto;
-    }
-  }
-  
-  .nav {
-    flex-grow: 1;
-    
-    &-list {
-      display: flex;
-      gap: 24px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    
-    &-item {
-      a {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 120%;
-        letter-spacing: 0;
-        text-decoration: none;
-        color: #333;
-        padding: 39px 0;
-        position: relative;
-        
-      }
-    }
-  }
-  
-  .contacts {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-left: auto;
-    
-    .phone-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 24px;
-    }
-    
-    .phone-icon {
-      width: 16px;
-      height: 16px;
-    }
-    
-    .phone {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 120%;
-      letter-spacing: 0;
-      text-decoration: none;
-      color: #333;
-      
-    }
-    
-    .btn {
-      font-family: 'Montserrat', sans-serif;
-      background: #029F59;
-      color: white;
-      border: none;
-      padding: 16px 40px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 120%;
-      cursor: pointer;
-      transition: background 0.3s;
-      height: 49px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+  gap: 80px;
+  width: 50%;
+  font-family: 'Open Sans', sans-serif;
+}
 
-    }
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+}
+
+.nav-item {
+  color: #666666;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  gap: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.icon {
+  width: 16px;
+}
+
+.phone {
+  color: #254741;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #029F59;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 16px 40px;
+  border: 0px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #027a47;
 }
 </style>
