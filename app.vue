@@ -3,7 +3,6 @@
     <Header />
     <main class="main-content">
       <NuxtPage />
-      <h1>Hello, world!</h1>
     </main>
     <Footer />
   </div>
@@ -14,7 +13,7 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 </script>
 
-<style>
+<style lang="scss">
 .root {
   display: flex;
   flex-direction: column;
@@ -24,5 +23,13 @@ import Footer from '~/components/Footer.vue'
 .main-content {
   flex: 1;
   padding: 40px 88px;
+
+  @include for-tablet-portrait-up {
+    padding: 30px 40px;
+  }
+
+  @include for-phone-only {
+    padding: 20px;
+  }
 }
 </style>
