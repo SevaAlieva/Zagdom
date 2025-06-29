@@ -2,6 +2,8 @@
   <div class="root">
     <Header />
     <main class="main-content">
+      <Slider />
+      <FeaturesGrid />
       <NuxtPage />
     </main>
     <Footer />
@@ -11,6 +13,8 @@
 <script setup lang="ts">
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
+import Slider from '~/components/Slider.vue'
+import FeaturesGrid from '~/components/FeaturesGrid.vue'
 </script>
 
 <style lang="scss">
@@ -22,14 +26,7 @@ import Footer from '~/components/Footer.vue'
 
 .main-content {
   flex: 1;
-  padding: 40px 88px;
-
-  @include for-tablet-portrait-up {
-    padding: 30px 40px;
-  }
-
-  @include for-phone-only {
-    padding: 20px;
-  }
+  display: flex;
+  flex-direction: column;
 }
 </style>
