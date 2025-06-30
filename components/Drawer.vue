@@ -15,8 +15,6 @@
           <a href="#" class="drawer__item" @click="closeMenu">Новости</a>
           <a href="#" class="drawer__item" @click="closeMenu">Контакты</a>
         </nav>
-        
-        <!-- Добавленная кнопка -->
         <button class="drawer__application-button" @click="closeMenu">
           Оставить заявку
         </button>
@@ -165,7 +163,6 @@ a {
   display: block;
 }
 
-/* Стили для новой кнопки */
 .drawer__application-button {
   background-color: #ffffff;
   color: #029F59;
@@ -178,7 +175,7 @@ a {
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 24px;
-  width: calc(100% - 21px - 10px); /* Учитываем padding drawer */
+  width: calc(100% - 21px - 10px); 
   max-width: 180px;
   
   &:hover {

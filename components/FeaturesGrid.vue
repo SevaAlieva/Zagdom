@@ -134,7 +134,6 @@ const stats = [
     gap: 10px;
   }
 }
-
 @media (max-width: 768px) {
   .text {
     width: 100%;

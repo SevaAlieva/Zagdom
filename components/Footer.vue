@@ -222,7 +222,6 @@ const goHome = () => {
     grid-area: contacts;
     padding-top: 0;
   }
-
   .footer__nav {
     grid-area: nav;
     margin-left: 0;

@@ -110,7 +110,6 @@ const navItems = [
 .header__phone-icon {
   width: 16px;
 }
-
 .header__button {
   background-color: #029F59;
   color: #ffffff;

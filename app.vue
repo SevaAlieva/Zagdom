@@ -29,4 +29,5 @@ import FeaturesGrid from '~/components/FeaturesGrid.vue'
   display: flex;
   flex-direction: column;
 }
+
 </style>

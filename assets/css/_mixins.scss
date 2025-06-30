@@ -13,7 +13,6 @@
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
-
 @mixin responsive-image {
   width: 100%;
   height: auto;

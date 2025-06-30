@@ -18,7 +18,6 @@
   --heading-2: 24px;
   --heading-3: 20px;
 }
-
 html, body {
   font-family: var(--main-font);
   font-size: var(--text-size-medium);

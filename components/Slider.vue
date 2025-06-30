@@ -221,7 +221,6 @@ const slides = [
   :deep(.swiper-pagination) {
     display: none;
   }
-  
   :deep(.swiper-button-next),
   :deep(.swiper-button-prev) {
     display: none;
