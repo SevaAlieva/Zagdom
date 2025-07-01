@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     }]
   ],
   css: [
+    '@csstools/normalize.css',
     '~/assets/css/main.css',
     'swiper/css',
     'swiper/css/navigation',
