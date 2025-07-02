@@ -4,6 +4,10 @@
     <main class="main-content">
       <Slider />
       <FeaturesGrid />
+      <div class="content">
+        <ProjectsList />
+        <News />
+      </div>
       <NuxtPage />
     </main>
     <Footer />
@@ -15,6 +19,8 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import Slider from '~/components/Slider.vue'
 import FeaturesGrid from '~/components/FeaturesGrid.vue'
+
+import News from '~/components/News.vue'
 </script>
 
 <style lang="scss">
@@ -30,4 +36,7 @@ import FeaturesGrid from '~/components/FeaturesGrid.vue'
   flex-direction: column;
 }
 
+.content {
+  width: 100%;
+}
 </style>
